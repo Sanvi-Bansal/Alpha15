@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://github.com/Sanvi-Bansal/Alpha/blob/main/Untitled%20design.png?raw=true">
+    <script src="https://kit.fontawesome.com/8f19d79027.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://wallpaperaccess.com/full/1900857.jpg);
+            background-size: cover; 
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.09); 
+            z-index: 1;}
+        #signin{
+        
+            height: 50vh;
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            gap: 2vh;
+            border: 1px solid black;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 30px;
+            z-index: 2;
+            padding-bottom: 3vh;
+
+        }
+        #login-form{
+            /* height: 50vh;
+            width: 30vw; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            gap: 2vh;
+            /* border: 1px solid black; */
+            background-color: transparent;
+            /* border-radius: 30px; */
+            /* z-index: 2; */
+            padding-bottom: 3vh;
+        }
+        #name{
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            width: max-content;
+            padding: 10px;
+            border-radius: 10px;
+            gap: 10px;
+            align-items: center;
+            outline: 1px solid black;
+            height: 4vh !important;
+        }
+        
+        #input_name>input{
+            border: none;
+            outline: none;
+            height: 3vh;
+            background-color: transparent;
+        }
+        #input_name>input::placeholder{
+            color: rgb(56, 51, 51);
+        }
+        /* #names{
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            width: max-content;
+            padding: 10px;
+            border-radius: 10px;
+            gap: 10px;
+            align-items: center;
+            outline: 1px solid black;
+        } */
+        #submit{
+
+            height: fit-content;
+            width: 10vw;
+            background-color: black;
+            border: none;
+            outline: none;
+            color: aliceblue;
+            font-size: 3vh;
+            padding: 8px;
+            border-radius: 20px;
+        }
+        #sin a{
+            text-decoration: none;
+        }
+       
+
+    </style>
+</head>
+<body>
+   
+    <div id="signin">
+        <pre><h2>MEMBER LOGIN</h2></pre>
+        <form id="login-form">
+          <div id="name">
+            <div id="profile_logo"><i class="fa-solid fa-user"></i></div>
+            <div id="input_name"><input type="text" placeholder="Name" id="name" required></div>
+          </div>
+          <div id="name">
+            <div id="profile_logo"><i class="fa-solid fa-lock"></i></div>
+            <div id="input_name"><input type="password" placeholder="Password" minlength="8" id="password" ></div>
+          </div>
+          <div id="sin"><p>Don't have an account <a href="./signup.html">SIGN UP</a></p></div>
+          <input type="submit" id="submit">
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+           e.preventDefault();
+
+           const name= document.getElementById('name').value;
+           const password = document.getElementById('password').value;
+
+           const storedUser = JSON.parse(localStorage.getItem('user'));
+
+           if (storedUser) {
+               if (storedUser.name === name && storedUser.password === password) {
+                   alert('Login successful!');
+                   localStorage.setItem('isLoggedIn', 'true');
+                   window.location.href = 'index.html'; 
+               } else {
+                   alert('Invalid email or password.');
+               }
+           } else {
+               alert('No user found. Please sign up first.');
+           }
+       });
+   </script>
+  
+</body>
+</html>
