@@ -1,0 +1,171 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: #1b263b;
+    color: #E3F2FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: rgba(10, 25, 47, 0.9);
+    color: #E3F2FD;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav{
+    padding-left: 47vw;
+}
+
+nav ul li a {
+    color: #E3F2FD;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: 2px solid white;
+    color: #E3F2FD;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Section */
+#maindiv {
+    width: 50vw;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(225, 225, 225, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#submit {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#submit:hover {
+    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    transform: scale(1.05);
+}
+
+/* Icons */
+#icons1, #icons2 {
+    font-size: 5vh;
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#icons2 a {
+    color: rgb(200, 247, 247);
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+#icons2 a:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 25, 47, 0.9);
+    color: #E3F2FD;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #maindiv {
+        width: 90%;
+    }
+}
