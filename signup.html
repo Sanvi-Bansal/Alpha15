@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://github.com/Sanvi-Bansal/Alpha/blob/main/Untitled%20design.png?raw=true">
+    <script src="https://kit.fontawesome.com/8f19d79027.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://wallpaperaccess.com/full/1900857.jpg);
+            background-size: cover; 
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.09); 
+            z-index: 1;
+        }
+        #signin{
+        
+        height: fit-content;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        gap: 2vh;
+        border: 1px solid black;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        z-index: 2;
+        padding-bottom: 3vh;
+
+    }
+    #signup-form{
+        
+        /* height: fit-content;
+        width: 30vw; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        gap: 2vh;
+        background-color: transparent;
+        /* border: 1px solid black; */
+        /* background-color: rgba(255, 255, 255, 0.5); */
+        /* border-radius: 30px; */
+        /* z-index: 2; */
+        padding-bottom: 3vh;
+
+    }
+    #name{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        width: max-content;
+        padding: 10px;
+        border-radius: 10px;
+        gap: 10px;
+        align-items: center;
+        outline: 1px solid black;
+        height: 4vh !important;
+    }
+    #input_name>input{
+        border: none;
+        outline: none;
+        height: 3vh;
+        background-color: transparent;
+    }
+    #input_name>input::placeholder{
+        color: rgb(56, 51, 51);
+    }
+  
+    #submit{
+
+        height: fit-content;
+        width: 10vw;
+        background-color: black;
+        border: none;
+        outline: none;
+        color: aliceblue;
+        font-size: 3vh;
+        padding: 8px;
+        border-radius: 20px;
+    }
+    #sin a{
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="signin">
+        <pre><h1>MEMBER SIGNUP</h1></pre>
+        <form id="signup-form">
+          <div id="name">
+            <div id="profile_logo"><i class="fa-solid fa-user"></i></div>
+            <div id="input_name"><input type="text" placeholder="Name" id="name" required></div>
+          </div>
+          <div id="name">
+            <div id="profile_logo"><i class="fa-solid fa-envelope"></i></div>
+            <div id="input_name"><input type="email" placeholder="Email" id="email" required></div>
+          </div>
+          <div id="name">
+            <div id="profile_logo"><i class="fa-solid fa-lock"></i></div>
+            <div id="input_name"><input type="password" placeholder="Password" minlength="8" id="password" required></div>
+          </div>
+          <div id="sin"><p>Already Have an account <a href="./login.html">Log in</a></p></div>
+          <input type="submit" id="submit">
+        </form>
+
+
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+           e.preventDefault(); 
+
+           const name = document.getElementById('name').value;
+           const email = document.getElementById('email').value;
+           const password = document.getElementById('password').value;
+
+           const user = {
+               name,
+               email,
+               password,
+           };
+
+           localStorage.setItem('user', JSON.stringify(user));
+
+           alert('Sign-Up successful! You can now login.');
+           window.location.href = 'login.html'; 
+       });
+   </script>
+</body>
+</html>
