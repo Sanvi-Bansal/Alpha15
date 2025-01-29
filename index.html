@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://github.com/Sanvi-Bansal/Alpha/blob/main/Untitled%20design.png?raw=true">
+    <script src="https://kit.fontawesome.com/8f19d79027.js" crossorigin="anonymous"></script>
+    <style>
+        #hiii{
+            font-family: "Poppins", serif;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="hiii"> FutureByte AI </h1>
+        
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="write.html">Blog</a></li>
+              <li><a href="#" id="openChatbot">Chat with Us</a></li>
+              <!-- <li><a href="login.html">Login</a></li> -->
+            </ul>
+        </nav>
+        
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <section class="featured">
+        <img src="https://static.javatpoint.com/tutorial/ai/images/future-of-artificial-intelligence.png" alt="Featured Blog Image">
+        <div class="featured-content">
+            <h2>The Future of AI in Blogging</h2>
+            <p>Discover how AI is transforming content creation, making it easier to grow traffic and engage readers.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-title">Latest Articles</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://th.bing.com/th/id/OIP.AxU9m97WaB3_7ToWG5ezggHaE8?rs=1&pid=ImgDetMain" alt="Blog Post Image">
+                <h3>Web 3.0 & The Future</h3>
+                <p>Decentralization is reshaping the internet. Learn how blockchain and smart contracts are playing a role.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://th.bing.com/th/id/R.bd347489235707571412357a25e389e2?rik=9Ht8cUPagQCadg&riu=http%3a%2f%2frockcontent.com%2fwp-content%2fuploads%2f2023%2f05%2fai-writing.png&ehk=ddQVTmfbHvk5wsyWyQKlV%2bhFqAAttBK8XYlALbQZY0A%3d&risl=&pid=ImgRaw&r=0" alt="User Profile">
+                <h3>AI in Content Writing</h3>
+                <p>How AI-driven tools are changing how we write and optimize content for better engagement.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/seo_trends.jpg" alt="Blog Image">
+                <h3>SEO Trends for 2025</h3>
+                <p>Get ahead with the latest SEO trends and best practices for ranking higher in search engines.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-OmGeDFaS8qahBF67xL6VSJT4s-iTx0kzA&s" alt="Blog Image">
+                <h3>Cybersecurity in Blogging</h3>
+                <p>Learn essential cybersecurity practices to keep your blog and readers safe from online threats.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRA8rXWz13RZbuaXvlojrjO17_5HK3fJeCCw&s" alt="Blog Image">
+                <h3>Content Marketing Strategies</h3>
+                <p>Discover the most effective content marketing strategies to boost your blog's reach and engagement.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEYFrj1QqAmQrrW3b0OJeODAR7JufySyrRg&s" alt="Blog Image">
+                <h3>How to Write a Perfect Blog Post</h3>
+                <p>Master the art of writing engaging blog posts that captivate readers and rank well in search engines.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+        </div>
+      <!-- Modal Structure -->
+    <div id="modal" class="modal">
+    <div class="modal-content" id="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <!-- Dynamic content will be inserted here -->
+    </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <br><br><p>&copy; 2025 FutureByte AI. All rights reserved.</p><br><br>
+            <div id="icons1">
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-pinterest" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+            </div><br><br>
+            <div id="icons2">
+               
+            </div>
+    </footer>
+
+    <!-- Chatbot Popup -->
+    <div id="chatbot" class="chatbot-popup">
+        <div class="chatbot-header">
+            <span>Chat with Us</span>
+            <button id="closeChatbot">X</button>
+        </div>
+        <div class="chatbot-body">
+            <p id="chatbot-question">Hello! How can I help you today? (Type your message below)</p>
+            <input type="text" id="user-response" placeholder="What is AI?...">
+            <button id="send-response">Send</button>
+            <div id="chatbot-reply"></div>
+        </div>
+    </div>
+    <div id="scroll-to-top" class="fab">
+        <a href="#top">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
